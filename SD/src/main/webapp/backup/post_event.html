@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI'S CAVE | 投稿イベント</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1><a href="index.html">MI'S CAVE</a></h1>
+                <p>アクセス便利、自由利用できるレンタルスペース！</p>
+            </div>
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="rental.html">RENTAL</a></li>
+                    <li><a href="event.html">EVENT</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="access.html">ACCESS</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="register.html">REGISTER</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form id="postEventForm">
+            <h2>イベントを投稿する</h2>
+            <label for="eventTitle">イベント名:</label>
+            <input type="text" id="eventTitle" name="eventTitle" required>
+        
+            <label for="eventDate">日付:</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+        
+            <label for="eventTime">活動時間:</label>
+            <input type="text" id="eventTime" name="eventTime" placeholder="例: 18:00 - 23:00" required>
+        
+            <label for="eventType">活動タイプ:</label>
+            <input type="text" id="eventType" name="eventType" required>
+        
+            <label for="eventCapacity">募集人数:</label>
+            <input type="number" id="eventCapacity" name="eventCapacity" min="1" required>
+        
+            <label for="eventFee">参加費用:</label>
+            <input type="number" id="eventFee" name="eventFee" min="0" required>
+        
+            <button type="button" onclick="postEvent()">イベントを投稿</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
